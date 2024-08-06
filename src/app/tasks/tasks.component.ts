@@ -9,16 +9,8 @@ import {
 } from '@angular/core';
 
 import { TaskComponent } from './task/task.component';
-import { Task } from './task/task.model';
 import { TasksService } from './tasks.service';
-import {
-  ActivatedRoute,
-  ActivatedRouteSnapshot,
-  ResolveFn,
-  RouterLink,
-  RouterStateSnapshot,
-} from '@angular/router';
-import { UsersService } from '../users/users.service';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tasks',
@@ -55,5 +47,3 @@ export class TasksComponent implements OnInit {
     this.destroyRef.onDestroy(() => subscription.unsubscribe());
   }
 }
-
-
